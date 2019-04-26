@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YQGuideView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YQGuideView.'
+  s.summary          = '新手引导页或者介绍页'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        非常方便实用的一个新手引导页或者介绍页
                        DESC
 
   s.homepage         = 'https://github.com/yinqiong/YQGuideView'

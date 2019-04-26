@@ -1,0 +1,16 @@
+PODS:
+  - YQGuideView (0.1.0)
+
+DEPENDENCIES:
+  - YQGuideView (from `../`)
+
+EXTERNAL SOURCES:
+  YQGuideView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YQGuideView: 381f0585f25f65889555a51034a2cde6fe5ca54b
+
+PODFILE CHECKSUM: 6c762dfaf95753c9acacc067da6e6f6a76f2b511
+
+COCOAPODS: 1.6.1

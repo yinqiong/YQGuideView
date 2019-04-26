@@ -1,0 +1,6 @@
+framework module YQGuideView {
+  umbrella header "YQGuideView-umbrella.h"
+
+  export *
+  module * { export * }
+}
