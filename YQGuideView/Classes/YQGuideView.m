@@ -50,8 +50,8 @@
     return nil;
 }
 
-- (instancetype)initWithTabBar:(UITabBar *)bar tabBarItem:(UITabBarItem *)tabBarItem{
-    UIView *view = [self viewWithTabBar:bar item:tabBarItem];
+- (instancetype)initWithTabBar:(UITabBar *)bar index:(NSInteger)index {
+    UIView *view = [self viewWithTabBar:bar index:index];
     if (view) {
         return [self initWithView:view];
     }
@@ -332,7 +332,7 @@
 }
 
 #pragma mark - tabBar 获取view
-- (UIView *)viewWithTabBar:(UITabBar *)bar item:(UITabBarItem *)tabBarItem {
+- (UIView *)viewWithTabBar:(UITabBar *)bar index:(NSInteger)index {
     if (!bar) {
         return nil;
     }
@@ -342,7 +342,6 @@
             [tabbarBtns addObject:subView];
         }
     }
-    NSInteger index = [tabbarBtns indexOfObject:tabBarItem];
     UIView * indexView = tabbarBtns[index];
     return indexView;
 }

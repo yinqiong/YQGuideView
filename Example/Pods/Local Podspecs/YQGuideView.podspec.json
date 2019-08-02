@@ -1,8 +1,8 @@
 {
   "name": "YQGuideView",
   "version": "0.1.0",
-  "summary": "A short description of YQGuideView.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "新手引导页或者介绍页",
+  "description": "非常方便实用的一个新手引导页或者介绍页",
   "homepage": "https://github.com/yinqiong/YQGuideView",
   "license": {
     "type": "MIT",

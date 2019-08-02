@@ -80,10 +80,10 @@ typedef NS_ENUM(NSInteger, YQWinCornerType){
 /**
  
 UITabBarItem 的视图引导
- @param tabBarItem 被引导的item
+ @param index 第几个
  @return self
  */
-- (instancetype)initWithTabBar:(UITabBar *)bar tabBarItem:(UITabBarItem *)tabBarItem;
+- (instancetype)initWithTabBar:(UITabBarController *)bar index:(NSInteger)index;
 
 
 @end

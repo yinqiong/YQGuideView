@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "YQGuideView.h"
 
 FOUNDATION_EXPORT double YQGuideViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char YQGuideViewVersionString[];
