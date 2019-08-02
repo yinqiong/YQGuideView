@@ -342,6 +342,9 @@
             [tabbarBtns addObject:subView];
         }
     }
+    if (index >= tabbarBtns.count) {
+        return nil;
+    }
     UIView * indexView = tabbarBtns[index];
     return indexView;
 }

@@ -83,7 +83,7 @@ UITabBarItem 的视图引导
  @param index 第几个
  @return self
  */
-- (instancetype)initWithTabBar:(UITabBarController *)bar index:(NSInteger)index;
+- (instancetype)initWithTabBar:(UITabBar *)bar index:(NSInteger)index;
 
 
 @end

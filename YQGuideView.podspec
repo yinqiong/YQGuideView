@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YQGuideView'
-  s.version          = '0.1.0'
+  s.version          = '0.3.0'
   s.summary          = '新手引导页或者介绍页'
 
 # This description is used to generate tags and improve search results.
