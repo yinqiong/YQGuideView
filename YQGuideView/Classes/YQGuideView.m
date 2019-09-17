@@ -73,8 +73,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    // 得到聚焦窗口
-    [self maskLayerWithFrame:_winFrame cornerRadius:_cornerType];
+    if (_maskLayer) {
+        self.layer.mask = _maskLayer;
+        if (_dottedLineEdge) {
+            // 添加边缘虚线
+            [self aroundForLayerWithFrame:frame radius:corner];
+        }
+    }
 }
 
 - (void)setOffset:(UIEdgeInsets)offset {
@@ -99,20 +104,6 @@
     }
     [self removeFromSuperview];
 }
-
-#pragma mark - 添加mask
-- (void)maskLayerWithFrame:(CGRect)frame cornerRadius:(YQWinCornerType)corner {
-    
-    CAShapeLayer *maskLayer = [self layerWithFrame:frame cornerRadius:corner];
-    self.layer.mask = maskLayer;
-    
-    if (_dottedLineEdge) {
-        // 添加边缘虚线
-        [self aroundForLayerWithFrame:frame radius:corner];
-    }
-}
-
-
 
 #pragma mark - 蒙版layer
 - (CAShapeLayer *)layerWithFrame:(CGRect)frame cornerRadius:(YQWinCornerType)corner {

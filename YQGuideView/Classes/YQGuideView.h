@@ -28,6 +28,11 @@ typedef NS_ENUM(NSInteger, YQWinCornerType){
 @interface YQGuideView : UIView
 
 /**
+ 蒙版
+ */
+@property (nonatomic, strong) CAShapeLayer *maskLayer;
+
+/**
  聚焦的视图， 如果为nil，就是没有聚焦的视图
  */
 @property (nonatomic, weak) UIView *view;
@@ -38,7 +43,7 @@ typedef NS_ENUM(NSInteger, YQWinCornerType){
 @property (nonatomic, assign) UIEdgeInsets offset;
 
 /**
- 聚焦窗口的frame，
+ 聚焦窗口的frame
  注意:
     1. 如果 offset == zero && view ！= nil， winFrame = view.frame
     2. 如果引导上有其它 子视图，需要计算与聚焦窗口的相对位置，应该使用winFrame
@@ -48,7 +53,7 @@ typedef NS_ENUM(NSInteger, YQWinCornerType){
 /**
  聚焦边缘是否虚线显示
  */
-@property (nonatomic, assign)BOOL dottedLineEdge;
+@property (nonatomic, assign) BOOL dottedLineEdge;
 
 /**
  聚焦窗口类型
@@ -98,12 +103,20 @@ UITabBarItem 的视图引导
 /**
  获取一个绘制聚焦窗口的路径
 
- @param frame a区域
+ @param frame 区域
  @param corner 展示样式
  @param clockwise 是否反转
  @return 贝塞尔曲线
  */
 - (UIBezierPath *)bezierPathWithFrame:(CGRect)frame radius:(YQWinCornerType)corner clockwise:(BOOL)clockwise;
+
+/**
+ 添加聚焦窗口边缘虚线
+
+ @param frame 区域
+ @param corner 展示方式
+ */
+- (void)aroundForLayerWithFrame:(CGRect)frame radius:(YQWinCornerType)corner;
 
 
 @end
