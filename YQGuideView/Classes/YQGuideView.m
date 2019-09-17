@@ -112,6 +112,8 @@
     }
 }
 
+
+
 #pragma mark - 蒙版layer
 - (CAShapeLayer *)layerWithFrame:(CGRect)frame cornerRadius:(YQWinCornerType)corner {
     

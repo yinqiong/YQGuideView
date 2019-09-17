@@ -85,6 +85,26 @@ UITabBarItem 的视图引导
  */
 - (instancetype)initWithTabBar:(UITabBar *)bar index:(NSInteger)index;
 
+/**
+ 获取蒙版
+
+ @param frame 萌版区域
+ @param corner 窗口展示样式
+ @return layer
+ */
+- (CAShapeLayer *)layerWithFrame:(CGRect)frame cornerRadius:(YQWinCornerType)corner;
+
+
+/**
+ 获取一个绘制聚焦窗口的路径
+
+ @param frame a区域
+ @param corner 展示样式
+ @param clockwise 是否反转
+ @return 贝塞尔曲线
+ */
+- (UIBezierPath *)bezierPathWithFrame:(CGRect)frame radius:(YQWinCornerType)corner clockwise:(BOOL)clockwise;
+
 
 @end
 
